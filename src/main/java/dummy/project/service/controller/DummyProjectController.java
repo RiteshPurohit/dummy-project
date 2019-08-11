@@ -16,6 +16,7 @@ public class DummyProjectController
 	@RequestMapping(value="/oms/capture/request",method=RequestMethod.POST)
 	public Topic getTopic(@RequestBody String data) throws JsonParseException, JsonMappingException, IOException
 	{
+		System.out.println("Hi");
 		return new ObjectMapper().readValue(data, Topic.class);
 	}
 }
